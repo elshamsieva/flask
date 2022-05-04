@@ -1,0 +1,22 @@
+{% extends 'logbase.html' %}
+
+{% block title %}
+Результат
+{% endblock %}
+{%  block content %}
+<div class="container mt-5">
+    <h1>Результат</h1>
+
+    <form method="get">
+        {% for result in results %}
+            <table>
+            <td>{{ result.id }}</td>
+                <td>{{ result.fio }}</td>
+                <td>{{ result.time }}</td>
+
+            </table>
+        {% endfor %}
+
+    </form>
+</div>
+{% endblock %}

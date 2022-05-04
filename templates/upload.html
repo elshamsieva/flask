@@ -1,0 +1,29 @@
+{% extends 'logbase.html' %}
+
+{% block title %}
+Добавление сотрудника
+{% endblock %}
+{%  block content %}
+<div class="container mt-5">
+    <h1>Добавление сотрудника</h1>
+    <form action="http://localhost:5000/upload" enctype="multipart/form-data" method="post">
+        <h5> Загрузите фотография формата jpg/jpeg</h5>
+        <h5> В качестве названия укажите ФИО сотрудника </h5>
+        <input type="file" name="pic" />
+        <input type="submit" value="Отправить"><br>
+    </form> <br><br>
+    <form method="get">
+        {% for worker in workers %}
+            <h5>{{ worker.fio}}</h5>
+
+             <a href="{{url_for('edit', worker_id = worker.id )}}">
+                Изменить
+            </a>
+            <a href="{{url_for('delete', worker_id = worker.id )}}" style="margin-left: 10px;">
+                Удалить
+            </a>
+        {% endfor %}
+
+    </form>
+</div>
+{% endblock %}

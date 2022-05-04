@@ -1,0 +1,22 @@
+{% extends 'logbase.html' %}
+
+{% block title %}
+Распознавание лиц
+{% endblock %}
+{%  block content %}
+<div class="container mt-5">
+    <h1> Распознавание </h1>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+            <img src="{{ url_for('video_feed') }}" width="100%">
+        </div>
+    </div>
+</div>
+</body>
+
+
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'logbase.html' %}
+
+{% block title %}
+Удаление сотрудника
+{% endblock %}
+{%  block content %}
+<div class="container mt-5">
+    <h1>Удаление сотрудника</h1>
+    <h2>Вы уверены, что хотите удалить сотрудника?</h2>
+    <form action="#" method='post'>
+        <button type="submit">Удалить</button>
+    </form>
+        <a href="/upload">
+            <button>Отменить</button>
+        </a>
+    </div>
+{% endblock %}
